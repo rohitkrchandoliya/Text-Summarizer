@@ -21,7 +21,7 @@ function splitSentences(text) {
     }
 
     // Fallback for browsers without Intl.Segmenter.
-    return trimmed.match(/[^.!?]+(?:[.!?]+[”’"'\])}]*)?(?=\s|$)/gu)?.map(s => s.trim()).filter(Boolean) || [trimmed];
+    return trimmed.match(/[^.!?]+[.!?]?/gu)?.map(s => s.trim()).filter(Boolean) || [trimmed];
 }
 
 function summarize(text) {
